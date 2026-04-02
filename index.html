@@ -4,29 +4,36 @@
 <head>
     <!--
     ╔════════════════════════════════════════════════════════════════════╗
-    ║          HOW TO UPLOAD AND CHANGE YOUR PROFILE PHOTO              ║
+    ║                    PORTFOLIO SETUP INSTRUCTIONS                    ║
     ╚════════════════════════════════════════════════════════════════════╝
     
-    OPTION 1: USE A LOCAL IMAGE FILE
-    ─────────────────────────────────
-    1. Create a folder called "images" in the same directory as this file
-    2. Place your photo in: F:\flutter\protofilo\images\my-photo.jpg
-    3. Change line ~657 from:
+    📸 TO CHANGE YOUR PROFILE PHOTO:
+    ──────────────────────────────────
+    OPTION 1: Use a Local Image File
+    1. Create an "images" folder in F:\flutter\protofilo\
+    2. Place your photo: F:\flutter\protofilo\images\my-photo.jpg
+    3. Find line ~657 and change:
        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces"
     4. To:
        src="images/my-photo.jpg"
     
-    OPTION 2: USE AN ONLINE IMAGE URL
-    ──────────────────────────────────
-    1. Upload your photo to an online service (e.g., Imgur, Google Drive, Cloudinary)
-    2. Get the image URL
-    3. Replace the src attribute with your online URL:
-       src="https://your-website.com/photo.jpg"
+    OPTION 2: Use an Online Image URL
+    1. Upload your photo to Imgur, Google Drive, or Cloudinary
+    2. Get the direct image URL
+    3. Replace the src attribute with your online URL
     
-    PHOTO REQUIREMENTS:
-    ✓ Square format (1:1 aspect ratio) works best
-    ✓ At least 500x500 pixels resolution
-    ✓ Professional headshot recommended
+    📄 TO ENABLE CV DOWNLOAD:
+    ─────────────────────────
+    1. Create or prepare your CV as a PDF file
+    2. Name it exactly: "CV.pdf"
+    3. Place it in: F:\flutter\protofilo\CV.pdf
+    4. The Download CV button will automatically work!
+    
+    Alternatively, you can use word2pdf or any online converter to create the PDF.
+    
+    BUTTON FUNCTIONALITY:
+    • "Hire Me" - Navigates to the Contact/Languages section for easy access to your contact info
+    • "Download CV" - Automatically downloads CV.pdf from the portfolio folder
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -622,7 +629,7 @@
             <button class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="tel:+201201290739" class="nav-btn">Hire Me</a>
+            <a href="#contact" class="nav-btn">Hire Me</a>
         </div>
     </nav>
 
@@ -648,10 +655,10 @@
 
                 <!-- CTA Buttons -->
                 <div class="hero-buttons">
-                    <button class="btn-primary">
+                    <a href="#contact" class="btn-primary">
                         <i class="fas fa-rocket"></i> Hire Me
-                    </button>
-                    <button class="btn-secondary">
+                    </a>
+                    <button class="btn-secondary" onclick="downloadCV()">
                         <i class="fas fa-download"></i> Download CV
                     </button>
                 </div>
@@ -944,7 +951,132 @@
     </section>
 
     <!-- Languages Section -->
+    <!-- Contact Section -->
     <section id="contact">
+        <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: start;">
+            <!-- Contact Information -->
+            <div>
+                <h3 style="color: var(--accent-orange); margin-bottom: 25px; font-size: 1.3rem;">Contact Information
+                </h3>
+
+                <div class="contact-item" style="margin-bottom: 25px;">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;"><i class="fas fa-phone"
+                            style="color: var(--accent-orange); margin-right: 10px;"></i>Phone</h4>
+                    <a href="tel:+201201290739"
+                        style="color: var(--accent-orange); text-decoration: none; font-size: 1.1rem;">+20 120 129
+                        0739</a>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 25px;">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;"><i class="fas fa-envelope"
+                            style="color: var(--accent-orange); margin-right: 10px;"></i>Email</h4>
+                    <a href="mailto:mohamedabdellsalam8@gmail.com"
+                        style="color: var(--accent-orange); text-decoration: none; font-size: 1rem;">mohamedabdellsalam8@gmail.com</a>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 25px;">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;"><i class="fab fa-linkedin"
+                            style="color: var(--accent-orange); margin-right: 10px;"></i>LinkedIn</h4>
+                    <a href="https://linkedin.com/in/mohamed-abdelsalam-0323a7249" target="_blank"
+                        style="color: var(--accent-orange); text-decoration: none; font-size: 1rem;">linkedin.com/in/mohamed-abdelsalam</a>
+                </div>
+
+                <div class="contact-item">
+                    <h4 style="color: var(--text-primary); margin-bottom: 8px;"><i class="fab fa-github"
+                            style="color: var(--accent-orange); margin-right: 10px;"></i>GitHub</h4>
+                    <a href="https://github.com/mohamed-abdelllsalam" target="_blank"
+                        style="color: var(--accent-orange); text-decoration: none; font-size: 1rem;">github.com/mohamed-abdelllsalam</a>
+                </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div>
+                <h3 style="color: var(--accent-orange); margin-bottom: 25px; font-size: 1.3rem;">Quick Actions</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="tel:+201201290739" style="
+                        background: var(--accent-orange);
+                        color: white;
+                        padding: 15px 25px;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        text-align: center;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                    " onmouseover="this.style.boxShadow='0 0 30px rgba(255, 107, 0, 0.6)'"
+                        onmouseout="this.style.boxShadow='none'">
+                        <i class="fas fa-phone"></i> Call Me Now
+                    </a>
+
+                    <a href="mailto:mohamedabdellsalam8@gmail.com" style="
+                        background: transparent;
+                        color: var(--accent-orange);
+                        padding: 15px 25px;
+                        border: 2px solid var(--accent-orange);
+                        border-radius: 10px;
+                        text-decoration: none;
+                        text-align: center;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                    " onmouseover="this.style.background='rgba(255, 107, 0, 0.1)'"
+                        onmouseout="this.style.background='transparent'">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+
+                    <a href="https://linkedin.com/in/mohamed-abdelsalam-0323a7249" target="_blank" style="
+                        background: rgba(255, 107, 0, 0.15);
+                        color: var(--accent-orange);
+                        padding: 15px 25px;
+                        border: 1px solid rgba(255, 107, 0, 0.3);
+                        border-radius: 10px;
+                        text-decoration: none;
+                        text-align: center;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                    " onmouseover="this.style.boxShadow='0 5px 15px rgba(255, 107, 0, 0.2)'"
+                        onmouseout="this.style.boxShadow='none'">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+
+                    <button onclick="downloadCV()" style="
+                        background: rgba(255, 107, 0, 0.1);
+                        color: var(--accent-orange);
+                        padding: 15px 25px;
+                        border: 1px solid rgba(255, 107, 0, 0.3);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        font-size: 1rem;
+                    " onmouseover="this.style.boxShadow='0 5px 15px rgba(255, 107, 0, 0.2)'"
+                        onmouseout="this.style.boxShadow='none'">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages">
         <h2><i class="fas fa-language"></i> Languages</h2>
 
         <div class="skills-grid">
@@ -1219,6 +1351,82 @@
                 }
             });
         });
+
+        // Download CV function
+        function downloadCV() {
+            // Direct download approach - works with local files
+            const link = document.createElement('a');
+            link.href = 'CV.pdf';
+            link.download = 'Mohamed-Abdellsalam-CV.pdf';
+
+            try {
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                console.log('CV download initiated');
+            } catch (error) {
+                document.body.removeChild(link);
+                showCVSetupInstructions();
+            }
+        }
+
+        function showCVSetupInstructions() {
+            const message = `📄 CV DOWNLOAD - SETUP REQUIRED
+
+✓ HOW TO FIX THIS:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1️⃣: CREATE YOUR CV (PDF Format)
+  
+  Option A - Use Microsoft Word:
+    • Open Word or Google Docs
+    • Write your professional CV
+    • Export as PDF
+
+  Option B - Use Canva:
+    • Visit canva.com
+    • Search "CV" templates
+    • Download as PDF
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2️⃣: RENAME THE FILE
+  
+  Name it EXACTLY: CV.pdf
+  (Make sure it ends with .pdf)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3️⃣: MOVE TO PROJECT FOLDER
+  
+  Location: F:\\flutter\\protofilo\\
+  
+  This must be in the SAME folder as:
+  ✓ index.html
+  ✓ portfolio.html
+  ✓ README.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4️⃣: REFRESH BROWSER
+  
+  • Press F5 or Ctrl+R
+  • Click "Download CV" again ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 IMMEDIATE ALTERNATIVES:
+
+📞 Phone: +20 120 129 0739
+📧 Email: mohamedabdellsalam8@gmail.com
+💼 LinkedIn: linkedin.com/in/mohamed-abdelsalam-0323a7249
+🐙 GitHub: github.com/mohamedabdellsalam
+
+Any questions? Open index.html folder location.`;
+
+            alert(message);
+        }
     </script>
 </body>
 

@@ -1,20 +1,22 @@
-# Mohamed Abdellsalam - Portfolio
+# Mohamed Abdellsalam - Flutter Developer Portfolio
 
-A beautiful, modern, and fully responsive portfolio website showcasing the professional work and experiences of **Mohamed Abdellsalam**, a skilled Flutter Developer and Mobile Application Developer.
+A modern, dark-themed, and fully responsive portfolio website showcasing the professional work and experiences of **Mohamed Abdellsalam**, a skilled Flutter Developer and Mobile Application Developer.
 
 ## 🌟 Features
 
 ### Design & UX
-- **Modern Gradient Design**: Beautiful purple-to-blue gradient with professional animations
+- **Modern Dark Theme**: Sleek dark background (#121212) with vibrant orange accents (#FF6B00)
 - **Smooth Animations**: Fade-in effects, slide transitions, and floating elements
 - **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Elements**: Hover effects and smooth transitions throughout
+- **Interactive Elements**: Hover effects, glowing buttons, and smooth transitions throughout
+- **Fixed Stats Card**: Key metrics displayed on the right side of screen for quick reference
 
 ### Sections Included
-- **Professional Header**: Eye-catching hero section with contact information
-- **Professional Summary**: Overview of skills and experience
-- **Education**: Academic background and relevant coursework
+- **Professional Header**: Eye-catching hero section with large greeting and orange accent
+- **About Me**: Professional summary of skills and experience
+- **Services**: 6 main service offerings with icons (Flutter Development, API Integration, Performance Optimization, UI Design, Firebase Solutions, Bug Fixing)
 - **Professional Experience**: Freelance Flutter Developer achievements and metrics
+- **Education**: Academic background and relevant coursework
 - **Featured Projects**:
   - 🍎 Fruit Hub - E-commerce Mobile Application
   - 💬 Chatify - Real-Time Chat Application
@@ -22,6 +24,12 @@ A beautiful, modern, and fully responsive portfolio website showcasing the profe
 - **Technical Skills**: Organized by categories (Languages, Mobile Dev, Backend, Architecture, Tools, Specializations)
 - **Soft Skills**: Communication, Problem Solving, Team Collaboration, and more
 - **Languages**: Arabic (Native) and English (Advanced)
+
+### Key Statistics Display
+📊 **Fixed Stats Card** (Bottom-Right Corner):
+- **8+ Apps Delivered** - Production-ready Android applications
+- **100+ API Endpoints** - REST API integrations with Firebase
+- **500+ Active Users** - Supporting substantial user bases across projects
 
 ### Technical Highlights
 - **8+ Production Apps**: Delivered multiple real-world Android applications
@@ -42,7 +50,7 @@ Visit your portfolio at: `https://github.com/mohamed-abdelllsalam/portfolio`
 4. Your portfolio will be live at: `https://mohamed-abdelllsalam.github.io/portfolio`
 
 ### Run Locally
-Simply open `portfolio.html` in your web browser:
+Simply open `portfolio.html` (or `index.html`) in your web browser:
 ```bash
 # Windows
 start portfolio.html
@@ -58,37 +66,48 @@ xdg-open portfolio.html
 
 ```
 portfolio/
-├── portfolio.html      # Main portfolio file with all HTML, CSS, and styling
-└── README.md          # This file
+├── portfolio.html      # Modern dark-themed portfolio (recommended)
+├── index.html          # Additional portfolio version
+└── README.md           # This file
 ```
 
 ## 🎨 Design Details
 
 ### Color Scheme
-- **Primary Gradient**: #667eea to #764ba2 (Purple-Blue)
-- **Background**: White sections with gradient accents
-- **Text**: Dark gray (#333, #555) for readability
+- **Primary Dark Background**: #121212
+- **Secondary Background**: #1e1e1e
+- **Accent Orange**: #FF6B00 (primary buttons, highlights)
+- **Hover Orange**: #e55a00
+- **Text Primary**: #ffffff (white)
+- **Text Secondary**: #b0b0b0 (light gray)
 - **Accents**: Gradient overlays and semi-transparent whites
 
 ### Fonts
-- **Font Family**: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
-- **Responsive Typography**: Scales beautifully across devices
+- **Font Family**: Inter, Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif
+- **Responsive Typography**: Scales beautifully across devices using clamp()
 
 ### Animations
-- **Slide Down**: Navigation bar entrance
-- **Fade In Up**: Section and content animations
-- **Slide In Left/Right**: Header text effects
-- **Float**: Floating background elements
-- **Scale & Transform**: Interactive hover effects
+- **Slide Down**: Navigation bar entrance animation
+- **Fade In Up/Right**: Section content animations
+- **Glow Effects**: Orange button glow on hover
+- **Scale & Transform**: Interactive hover effects on buttons and cards
+- **Backdrop Blur**: Modern frosted glass effect on navbar
 
 ## 📱 Responsive Breakpoints
 
-- **Desktop** (1024px+): Full layout with all animations
-- **Tablet** (768px - 1023px): Adjusted spacing and typography
-- **Mobile** (480px - 767px): Condensed layout and navigation
-- **Small Mobile** (<480px): Optimized single-column design
+- **Desktop** (1024px+): Full 2-column layout with all animations
+- **Tablet** (768px - 1023px): Adjusted spacing and optimized typography
+- **Mobile** (480px - 767px): Single column with condensed navigation
+- **Small Mobile** (<480px): Optimized ultra-compact design
 
-## 🔗 Links Included
+### Mobile Optimizations
+- ✓ Stats card repositions to screen height at mobile sizes
+- ✓ Services grid converts to single column
+- ✓ Navigation menu collapses to hamburger button
+- ✓ Hero section scales responsively with viewport
+- ✓ All content remains fully readable and interactive
+
+## 🔗 Contact & Social Links
 
 - **Phone**: +20 120 129 0739
 - **Email**: mohamedabdellsalam8@gmail.com

@@ -495,9 +495,15 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            header {
+                margin-top: 60px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .header-content h2 {
@@ -506,7 +512,8 @@
 
             section {
                 padding: 30px 20px;
-                margin: 30px auto;
+                margin: 25px auto;
+                border-radius: 12px;
             }
 
             section h2 {
@@ -522,35 +529,66 @@
             }
 
             nav ul {
-                gap: 15px;
+                gap: 12px;
+                padding: 12px 10px;
+            }
+
+            nav a {
+                font-size: 0.95rem;
             }
 
             .contact-info {
-                gap: 10px;
+                gap: 8px;
             }
 
             .contact-info a {
-                font-size: 0.85rem;
-                padding: 6px 12px;
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            header::before,
+            header::after {
+                width: 200px;
+                height: 200px;
+            }
+
+            header::before {
+                top: -100px;
+                right: -100px;
+            }
+
+            header::after {
+                bottom: -50px;
+                left: -50px;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 640px) {
             .header-content h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .header-content h2 {
-                font-size: 1rem;
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 25px 18px;
+                margin: 20px auto;
             }
 
             section h2 {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
+                padding-bottom: 12px;
             }
 
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
+            section h3 {
+                font-size: 1.2rem;
+            }
+
+            .card {
+                padding: 20px;
+                margin-bottom: 15px;
             }
 
             .card-title {
@@ -560,6 +598,189 @@
 
             .card-title .date {
                 margin-top: 8px;
+            }
+
+            .skill-category {
+                padding: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .contact-info a {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+
+            nav ul {
+                flex-direction: row;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 8px;
+                white-space: nowrap;
+            }
+
+            .soft-skills {
+                gap: 8px;
+            }
+
+            .soft-skill-badge {
+                font-size: 0.85rem;
+                padding: 10px 16px;
+            }
+
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                margin-top: 50px;
+                min-height: 80vh;
+            }
+
+            .header-content h1 {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+
+            .header-content h2 {
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+
+            section {
+                padding: 20px 15px;
+                margin: 15px 10px;
+                border-radius: 10px;
+            }
+
+            section h2 {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+
+            section h3 {
+                font-size: 1.1rem;
+            }
+
+            .card {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .skill-category {
+                padding: 15px;
+            }
+
+            .skill-category h3 {
+                font-size: 1rem;
+            }
+
+            .skill-tag {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            nav ul {
+                padding: 10px 5px;
+                gap: 5px;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+
+            .contact-info {
+                gap: 6px;
+            }
+
+            .contact-info a {
+                gap: 5px;
+                padding: 7px 10px;
+                font-size: 0.75rem;
+            }
+
+            .soft-skill-badge {
+                font-size: 0.8rem;
+                padding: 8px 14px;
+            }
+
+            .summary-text {
+                font-size: 0.95rem;
+            }
+
+            .project-year {
+                font-size: 0.75rem;
+            }
+
+            footer {
+                padding: 20px 15px;
+                font-size: 0.9rem;
+            }
+
+            footer p {
+                margin: 8px 0;
+                word-break: break-word;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header-content h1 {
+                font-size: 1.4rem;
+            }
+
+            .header-content h2 {
+                font-size: 0.9rem;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 15px 12px;
+                margin: 12px 5px;
+            }
+
+            .contact-info a {
+                font-size: 0.7rem;
+                padding: 6px 8px;
+            }
+
+            .soft-skills {
+                gap: 6px;
+            }
+
+            .soft-skill-badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
             }
         }
     </style>
